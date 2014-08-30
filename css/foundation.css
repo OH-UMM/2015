@@ -1913,10 +1913,8 @@ img {
     border-radius: 20px;
     cursor: pointer;
     display: inline-block;
-    font-size: 1em;
+    font-size: 10px;
     font-weight: 700;
-    width=2px;
-    height=2px;
 
     overflow: hidden;
     padding: 1em 2em;
