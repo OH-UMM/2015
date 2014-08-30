@@ -1915,6 +1915,8 @@ img {
     display: inline-block;
     font-size:  1em;
     font-weight: 700;
+    width=20px
+    height=20px
 
     overflow: hidden;
     padding: 1em 2em;
