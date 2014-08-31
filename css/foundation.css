@@ -1943,11 +1943,11 @@ a {
 
 .rw-wrapper {
     width: 100%;
-    margin: 110px auto 140px auto;
+    margin: 140px auto 140px auto;
     font-family: "Helvetica", Arial;
-    padding: 10px;
+    padding: 20px;
     /*text-align: center;*/
-    position: center;
+    position: relatvie;
 
   
 }
