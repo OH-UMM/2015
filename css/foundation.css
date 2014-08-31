@@ -1988,8 +1988,7 @@ a {
 */
 
 .rw-words-1 span{
-  position:relative;
-  left: 30px;
+  position:fixed;
   opacity: 0;
   overflow: hidden;
   color: #F1EBEB;
