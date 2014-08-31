@@ -1989,6 +1989,7 @@ a {
 
 .rw-words-1 span{
   position:fixed;
+  left:50px;
   opacity: 0;
   overflow: hidden;
   color: #F1EBEB;
