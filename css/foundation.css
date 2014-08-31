@@ -1948,7 +1948,6 @@ a {
     padding: 10px;
     /*text-align: center;*/
     position: relatvie;
-    text-align: center;
 
   
 }
@@ -1957,7 +1956,6 @@ a {
  
     font-size: 8.3vw;
     color: #F1EBEB;
-    text-align: center;
 
 }
 
@@ -1971,14 +1969,12 @@ a {
     font-size: 100%;
     display: inline; 
     text-indent: 10px;
-    text-align: center;
     
 }
 
 .rw-words{
     display: inline;
     text-indent: 10px;
-    text-align: center;
   
 }
 
