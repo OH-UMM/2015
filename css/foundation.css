@@ -1988,7 +1988,7 @@ a {
 */
 
 .rw-words-1 span{
-  position:static;
+  position:fixed;
   opacity: 0;
   overflow: hidden;
   color: #F1EBEB;
@@ -2029,7 +2029,7 @@ a {
 
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; -webkit-transform: translateY(-20px); }
+    2% { opacity: 0; -webkit-transform: translateY(0px); }
   5% { opacity: 1; -webkit-transform: translateY(0px);}
     17% { opacity: 1; -webkit-transform: translateY(0px); }
   20% { opacity: 0; -webkit-transform: translateY(0px); }
