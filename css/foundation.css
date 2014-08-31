@@ -1968,13 +1968,13 @@ a {
 .rw-sentence span {
     font-size: 100%;
     display: inline; 
-    text-indent: 10px;
+    text-indent: 1px;
     
 }
 
 .rw-words{
     display: inline;
-    text-indent: 4px;
+    text-indent: 1px;
   
 }
 
