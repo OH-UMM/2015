@@ -1968,13 +1968,13 @@ a {
 .rw-sentence span {
     font-size: 100%;
     display: inline; 
-    text-indent: 1px;
+    text-indent: 10px;
     
 }
 
 .rw-words{
     display: inline;
-    text-indent: 1px;
+    text-indent: 10px;
   
 }
 
@@ -2039,37 +2039,37 @@ a {
 
 @-moz-keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; -moz-transform: translateY(-30px); }
+    2% { opacity: 0; -moz-transform: translateY(-20px); }
   5% { opacity: 1; -moz-transform: translateY(0px);}
     17% { opacity: 1; -moz-transform: translateY(0px); }
-  20% { opacity: 0; -moz-transform: translateY(30px); }
+  20% { opacity: 0; -moz-transform: translateY(20px); }
   80% { opacity: 0; }
     100% { opacity: 0; }
 }
 @-o-keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; -o-transform: translateY(-30px); }
+    2% { opacity: 0; -o-transform: translateY(-20px); }
   5% { opacity: 1; -o-transform: translateY(0px);}
     17% { opacity: 1; -o-transform: translateY(0px); }
-  20% { opacity: 0; -o-transform: translateY(30px); }
+  20% { opacity: 0; -o-transform: translateY(20px); }
   80% { opacity: 0; }
     100% { opacity: 0; }
 }
 @-ms-keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; -ms-transform: translateY(-30px); }
+    2% { opacity: 0; -ms-transform: translateY(-20px); }
   5% { opacity: 1; -ms-transform: translateY(0px);}
     17% { opacity: 1; -ms-transform: translateY(0px); }
-  20% { opacity: 0; -ms-transform: translateY(30px); }
+  20% { opacity: 0; -ms-transform: translateY(20px); }
   80% { opacity: 0; }
     100% { opacity: 0; }
 }
 @keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; transform: translateY(-30px); }
+    2% { opacity: 0; transform: translateY(-20px); }
   5% { opacity: 1; transform: translateY(0px);}
     17% { opacity: 1; transform: translateY(0px); }
-  20% { opacity: 0; transform: translateY(30px); }
+  20% { opacity: 0; transform: translateY(20px); }
   80% { opacity: 0; }
     100% { opacity: 0; }
 }
