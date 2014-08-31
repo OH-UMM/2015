@@ -2039,7 +2039,7 @@ a {
 
 @-moz-keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; -moz-transform: translateY(-20px); }
+    2% { opacity: 0; -moz-transform: translateY(0px); }
   5% { opacity: 1; -moz-transform: translateY(0px);}
     17% { opacity: 1; -moz-transform: translateY(0px); }
   20% { opacity: 0; -moz-transform: translateY(0px); }
@@ -2048,7 +2048,7 @@ a {
 }
 @-o-keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; -o-transform: translateY(-20px); }
+    2% { opacity: 0; -o-transform: translateY(0px); }
   5% { opacity: 1; -o-transform: translateY(0px);}
     17% { opacity: 1; -o-transform: translateY(0px); }
   20% { opacity: 0; -o-transform: translateY(0px); }
@@ -2057,7 +2057,7 @@ a {
 }
 @-ms-keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; -ms-transform: translateY(-20px); }
+    2% { opacity: 0; -ms-transform: translateY(0px); }
   5% { opacity: 1; -ms-transform: translateY(0px);}
     17% { opacity: 1; -ms-transform: translateY(0px); }
   20% { opacity: 0; -ms-transform: translateY(0px); }
@@ -2066,7 +2066,7 @@ a {
 }
 @keyframes rotateWord {
     0% { opacity: 0; }
-    2% { opacity: 0; transform: translateY(-20px); }
+    2% { opacity: 0; transform: translateY(0px); }
   5% { opacity: 1; transform: translateY(0px);}
     17% { opacity: 1; transform: translateY(0px); }
   20% { opacity: 0; transform: translateY(0px); }
