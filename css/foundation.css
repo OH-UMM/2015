@@ -1945,7 +1945,7 @@ a {
     width: 100%;
     margin: 110px auto 140px auto;
     font-family: "Helvetica", Arial;
-    /*padding: 10px;*/
+    padding: 10px;
     /*text-align: center;*/
     position: relatvie;
 
@@ -1988,7 +1988,7 @@ a {
 */
 
 .rw-words-1 span{
-  position:absolute;
+  position:relative;
   opacity: 0;
   overflow: hidden;
   color: #F1EBEB;
