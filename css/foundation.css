@@ -1943,9 +1943,9 @@ a {
 
 .rw-wrapper {
     width: 100%;
-    margin: 140px auto 140px auto;
+    margin: 110px auto 140px auto;
     font-family: "Helvetica", Arial;
-    padding: 20px;
+    padding: 10px;
     /*text-align: center;*/
     position: relatvie;
 
@@ -1975,6 +1975,7 @@ a {
 .rw-words{
     display: inline;
     text-indent: 10px;
+    text-align: center;
   
 }
 
