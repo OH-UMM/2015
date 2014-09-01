@@ -23,8 +23,8 @@
         <a href="http://openhatch.org/" 
         	style="font-weight:bold; font-style: italic; font-family:'Signature';"><font size="6"> OpenHatch </a>
         <font style= "font-family:Serif; color: white;"><font size="5"> present <font/>
-<br><br/>
         </h3>
+<br><br/>
         <h1 style = "font-size:80px;">OPEN SOURCE COMES TO CAMPUS</h1>
         <h2>@ University of MN - Morris</h2>
         <h4>9/13/2014</h4>
@@ -146,10 +146,12 @@ window.onscroll = function() {
 
 
     <div class = "row" style = "height: 600px; width: 100%; margin-bottom: 8%;">
-  
         <h2 id = "location-txt" style = "text-align: center; color: #24C0EB; font-weight:700; font-family: 'Open Sans';">Join Us Here</h2>
-        <p style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weight:700;">600 E 4th St, Morris, MN 56267 Room Sci 3650.</p>
-        <div id = "map"></div>
+        <p style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weight:700;">600 E 4th St, Morris, MN 56267 Room Sci 3650.
+	<br><br/><a href= "http://www.morris.umn.edu/visitors/downloads/MorrisCampusMapBW.pdf" style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weight:700;">Click Here for UMM Campus Map.</a>
+</p>   
+
+<div id = "map"></div>
     
     </div>
 
@@ -195,10 +197,9 @@ window.onscroll = function() {
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhtOkghucAytuj81EeMb7ePhMtxgdqbC4&sensor=false&extension=.js"></script> 
-<script> google.maps.event.addDomListener(window, 'load', init);
 
+<script>
 var map;
-
 function init() {
     var mapOptions = {
         center: new google.maps.LatLng(45.590063, -95.902841),
@@ -206,7 +207,7 @@ function init() {
         zoomControl: true,
         zoomControlOptions: {
             style:google.maps.ZoomControlStyle.DEFAULT,
-            position: google.maps.ControlPosition.LEFT_CENTER
+            position: google.maps.ControlPosition.RIGHT_BOTTOM
         },
         disableDoubleClickZoom: true,
         panControl: true,
@@ -237,7 +238,7 @@ function init() {
     var mapElement = document.getElementById('map');
     var map = new google.maps.Map(mapElement, mapOptions);
     var locations = [
-        ['Student Center', 45.590063, -95.902841]
+        ['Sciecne Building', 45.588827, -95.902875]
     ];
 
     for (i = 0; i < locations.length; i++) {
@@ -259,7 +260,7 @@ function toggleBounce() {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
-
+ google.maps.event.addDomListener(window, 'load', init);
 </script> 
 
 <script>
