@@ -149,7 +149,7 @@ window.onscroll = function() {
         <h2 id = "location-txt" style = "text-align: center; color: #24C0EB; font-weight:700; font-family: 'Open Sans';">Join Us Here</h2>
         <p style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weight:700;">600 E 4th St, Morris, MN 56267 Room Sci 3650.
 	<br><br/>
-	<a href= "http://www.morris.umn.edu/visitors/downloads/MorrisCampusMapBW.pdf" style = "text-align: center; color: #006dd2; font-family: 'Droid Serif'; font-weight:700;">CLICK HERE</a> For UMM Campus Map.
+	<a href= "http://www.morris.umn.edu/visitors/downloads/MorrisCampusMapBW.pdf" style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weight:700;">Click Here For UMM Campus Map</a>.
 </p>   
 
 <div id = "map"></div>
@@ -196,73 +196,6 @@ window.onscroll = function() {
 <script>
   $(document).foundation();
 </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhtOkghucAytuj81EeMb7ePhMtxgdqbC4&sensor=false&extension=.js"></script> 
-
-<script>
-var map;
-function init() {
-    var mapOptions = {
-        center: new google.maps.LatLng(45.590063, -95.902841),
-        zoom: 15,
-        zoomControl: true,
-        zoomControlOptions: {
-            style:google.maps.ZoomControlStyle.DEFAULT,
-            position: google.maps.ControlPosition.RIGHT_BOTTOM
-        },
-        disableDoubleClickZoom: true,
-        panControl: true,
-        panControlOptions: {
-            position: google.maps.ControlPosition.TOP_RIGHT
-        },
-        mapTypeControl: true,
-        mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-            position: google.maps.ControlPosition.BOTTOM_CENTER
-        },
-        mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-        },
-        scaleControl: true,
-        scrollwheel: false,
-        streetViewControl: false,
-        draggable : true,
-        overviewMapControl: true,
-        overviewMapControlOptions: {
-            opened: false,
-        },
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-    styles: [ { "stylers": [ { "saturation": -100 } ] },{ "featureType": "water", "elementType": "geometry.fill", "stylers": [ { "color": "#0099dd" } ] },{ "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [ { "color": "#aadd55" } ] },{ "featureType": "road.highway", "elementType": "labels", "stylers": [ { "visibility": "on" } ] },{ "featureType": "road.arterial", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },{ "featureType": "road.local", "elementType": "labels.text", "stylers": [ { "visibility": "on" } ] },{ } ],
-    
-    }
-
-    var mapElement = document.getElementById('map');
-    var map = new google.maps.Map(mapElement, mapOptions);
-    var locations = [
-        ['Sciecne Building', 45.588827, -95.902875]
-    ];
-
-    for (i = 0; i < locations.length; i++) {
-        marker = new google.maps.Marker({
-            icon: '',
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map,
-            animation: google.maps.Animation.DROP,
-        });
-          google.maps.event.addListener(marker, 'click', toggleBounce);
-
-    }
-}
-function toggleBounce() {
-
-  if (marker.getAnimation() != null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
- google.maps.event.addDomListener(window, 'load', init);
-</script> 
 
 <script>
   $(window).scroll(function() {
