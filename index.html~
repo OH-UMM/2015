@@ -1,10 +1,39 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
+<style>
+.small-links{
+	text-align: center; 
+	color: #24c0eb; 
+	font-family: 'Droid Serif'; 
+	font-weight:800;
+	font-size: .7em;
+	padding-right: 1em;
+}
+</style>
 
   <head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenHatch at University of MN - Morris | Open Source Comes To Campus</title>
+    <title>OpenHatch at University of Minnesota - Morris | Open Source Comes To Campus</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <script src="js/vendor/modernizr.js">
@@ -25,13 +54,13 @@
         </h3>
 <br><br/>
         <h1 style = "font-size:80px;">OPEN SOURCE COMES TO CAMPUS</h1>
-        <h2>@ University of MN - Morris</h2>
-        <h4>9/13/2014</h4>
+        <h2>@ University of Minnesota - Morris</h2>
+        <h4>9/26/2014</h4>
 
         <div class= "btn2" style = "margin-top: 50px; margin-right:20px;"><a href = "https://docs.google.com/forms/d/1qqxJj9hetcX0oOxoj2KbBnW0R9DYTdRxnDk0R10ViDE/viewform?usp=send_form" style = "text-decoration: none; font-weight: 400; font-family: 'Open Sans';">Sign Up to Attend</a></div>
         <div class= "btn2" style = "margin-top: 50px;"><a href = "https://docs.google.com/forms/d/1hSdwhhjO2yZZ_fuRBNibbwCvZ4wnX631rrLb3f8LrxI/viewform?usp=send_form" style = "text-decoration: none; font-weight: 400; font-family: 'Open Sans';">Volunteer As a Mentor</a></div>
 
-<h3 style = "margin-top: 20px; font-size:20px; font-weight: bold;">Visit the event at the <u><a href="https://github.com/OH-UMM/OH-UMM/wiki">GitHub Wiki Page!</a></u></h3>
+<h3 style = "margin-top: 20px; font-size:20px; font-weight: bold;">Schedule and event details on the <u><a href="https://github.com/OH-UMM/2015/wiki">GitHub Wiki Page</a></u>!</h3>
 
   </div>
 
@@ -51,19 +80,26 @@ window.onscroll = function() {
 -->
 
  <div class = "row" style = "height: 195px; width: 100%; text-align: center;">
- 	
-        <h2 id = "location-txt" style = "text-align: center; color: #24C0EB; font-weight:800; font-family: 'Open Sans';">Join Us</h2>
+
+<br>
+<br>
+        <p><h2 id = "location-txt" style = "text-align: center; color: #24C0EB; font-weight:800; font-family: 'Open Sans'; font-size:5em;">Join Us</h2></p>
      
         
-        <a href=https://www.google.com/maps/place/University+of+Minnesota,+Morris/@45.589207,-95.903378,567m/data=!3m2!1e3!4b1!4m2!3m1!1s0x52cbad430eee6c99:0x674cc6fb6fded9f9?hl=en style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weightcolor: #24c0eb;:800;">600 E 4th St, Morris, MN 56267 Room Sci 3650.</a>
-	<br><br/>
-	<a href="http://www.morris.umn.edu/visitors/downloads/MorrisCampusMapBW.pdf" style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weight:800;">Click Here For UMM Campus Map</a>
-	<br><br/>
-	<a href="https://www.google.com/maps/dir//45.588191,-95.9032232/@45.5884356,-95.9020016,283m/data=!3m1!1e3!4m4!4m3!1m0!1m0!3e0?hl=en" style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weight:800;">Click Here For Directions to the West Parking Lot</a>
+        <a href=https://www.google.com/maps/place/University+of+Minnesota,+Morris/@45.589207,-95.903378,567m/data=!3m2!1e3!4b1!4m2!3m1!1s0x52cbad430eee6c99:0x674cc6fb6fded9f9?hl=en style = "text-align: center; color: #24c0eb; font-family: 'Droid Serif'; font-weightcolor: #24c0eb;:800; font-size:1.4em;">600 E 4th St, Morris, MN 56267 in Science 3650</a>
+
+<div style="padding:.4em;">
+	<a href="http://www.morris.umn.edu/visitors/downloads/MorrisCampusMapBW.pdf" class="small-links">UMM Campus Map</a>
+	<a href="https://www.google.com/maps/dir//45.588191,-95.9032232/@45.5884356,-95.9020016,283m/data=!3m1!1e3!4m4!4m3!1m0!1m0!3e0?hl=en" class="small-links">Directions to the West Parking Lot</a>
+	<a href="https://github.com/OH-UMM/OH-UMM/wiki" class="small-links">Home Page</a>
+</div>
     </div>
 	
-	
+	<br><br/>
+	<br><br/>
+	<br><br/>
 
+<hr>
     <div class = "row" style = "margin-bottom: 0px;"> 
     <div class = "large-12 columns day-text" style = "margin-bottom: 0px;">
       
@@ -132,7 +168,7 @@ window.onscroll = function() {
       <div class = "large-8 columns day-text">
       
         <h2>The Events</h2>
-        <p>This is a day-long immersion event that will take place on 9/13/2014 at University of MN - Morris. The curriculum is designed by OpenHatch, a non-profit dedicated to helping people get involved in open source.</p>
+        <p>This is a day-long immersion event that will take place on 9/26/2014 at University of Minnesota - Morris. The curriculum is designed by OpenHatch, a non-profit dedicated to helping people get involved in open source.</p>
  
       </div>
       <div class = "small-1 large-2 columns day-text">
