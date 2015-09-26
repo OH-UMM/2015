@@ -1,447 +1,223 @@
 <!doctype html>
 <html lang="en">
-
-	<head>
-		<meta charset="utf-8">
-
-		<title>Intro to Github</title>
-
-		<meta name="description" content="Intro to Github">
-		<meta name="author" content="Nicholas Freitag McPhee">
-		<meta name="author" content="M. Kirbie Dramdahl">
-		<meta name="author" content="David Donatucci">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/lessons.css" id="theme">
-
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section id="0">
-					<div style="padding:3.5em;"><!-- spacer div --></div>
-					<h1 class="vertialCenter1" style="vertical-align: middle;">Intro to Github</h1>
-				</section>
-
-				<section>
-					<section>
-						<h2>The big picture</h2>
-						<img align="right" style="padding: 15px; background-color: #FFFFFF" data-src="figures/Root_parent_illustration_no_triangle.png" width="45%">
-						<br>
-						<br>
-						<p>
-							Strong asymmetry between <em>root parent</em> and
-							<em>non-root parent</em> when performing sub-tree crossover.
-						</p>
-					</section>
-					<section>
-						<h2>The big picture</h2>
-						<img data-src="figures/Combined_fitness_over_time_no_dashed.svg" width="65%">
-						<p>
-							<a href="https://wiki.umn.edu/pub/UMMCSci/MICS2014TalksAndSlides/Analyzing_GP_with_Neo4j_MICS_2014.pdf">Earlier graph database work</a>
-							suggested we might want the "better" parent be the root parent:
-							<em>crossover bias</em>.
-						</p>
-						<aside class="notes">
-							Make sure I explain this figure!
-						</aside>
-					</section>
-
-					<section>
-						<h2>The big picture</h2>
-						<p>
-							Here we apply <em>crossover bias</em> to a variety of settings.
-						</p>
-						<p>
-							Results are slightly positive:
-							<ul>
-								<li>Definitely improved results for some situations</li>
-								<li>In general led to an improvement or no difference</li>
-								<li>In some instances it hurt</li>
-							</ul>
-						</p>
-						<p>
-							Suggests that parental asymmetries can matter and deserve further
-							study.
-						</p>
-					</section>
-				</section>
-
-			<section>
-				<h2>Outline</h2>
-
-				<ul>
-					<li>Introduction and definitions</li>
-						<ul>
-							<li>Crossover bias</li>
-							<li>Parental asymmetries</li>
-						</ul>
-				  <li>Experimental setup (problems &amp; parameters)</li>
-					<li>Results (weakly positive)</li>
-					<li>Conclusions</li>
-				</ul>
-			</section>
-
-			<section>
-				<section>
-					<h2>Parental asymmetries</h2>
-					<img align="right" style="padding: 15px; background-color: #FFFFFF" data-src="figures/Root_parent_illustration_no_triangle.png" width="40%">
-					<p>
-						Root parent vs. non-root parent
-					</p>
-					<p>
-						Crossover asymmetry: Root parent (typically) contributes more
-					</p>
-					<p>
-						Earlier observation: Offspring did better when root parent was
-							the more fit parent.
-					</p>
-					<p>
-						Is this true more generally?
-					</p>
-				</section>
-
-				<section>
-					<h2>Crossover bias probability</h2>
-
-					<blockquote>
-						The likelihood that
-						parents will be swapped (if necessary) to ensure that the more fit
-						parent is the root parent.
-					</blockquote>
-					<p>
-						Explore crossover bias probabilities 0, 0.25, 0.5, 0.75, &amp; 1.00.
-					</p>
-
-					<ul>
-						<li>0.00 bias probability: Never swap; like regular crossover</li>
-						<li>1.00: <em>Always</em> ensure more fit parent is root parent.</li>
-					</ul>
-
-					<p>
-						Note: We have 50% chance that more fit parent is root parent even
-						without swapping. E.g., 50% bias implies 75% of
-						crossovers have more fit parent as root parent.
-					</p>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h2>Experimental setup</h2>
-
-					<div class="twocol">
-						<p>
-							<b>5 test problems</b>
-						</p>
-						<p>
-							<ul>
-								<li>K Landscapes (K=6)</li>
-								<li>ORDERTREE (n=10)</li>
-								<li>U.S. Change</li>
-								<li>Pagie-1 regression</li>
-								<li>Sine regression (skipping)</li>
-							</ul>
-						</p>
-
-						<br>
-
-						<table>
-							<thead>
-								<tr>
-									<th>Parameter</th>
-									<th>Values</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Crossover bias</td>
-									<td>0, 0.25, 0.5, 0.75, 1</td>
-								</tr>
-								<tr>
-									<td>Tournament size</td>
-									<td>2, 3, 5, 7</td>
-								</tr>
-								<tr>
-									<td>Elitism</td>
-									<td>0 and 1%</td>
-								</tr>
-								<tr>
-									<td>Population size</td>
-									<td>1,024 and 10,240</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<p>
-						100 runs per treatment, each of 100 generations. <br>
-						All implemented in <a href="https://cs.gmu.edu/~eclab/projects/ecj/">ECJ</a>.
-					</p>
-
-					<aside class="notes">
-						<p>One exception: ORDERTREE only used small pop (1,024) due to
-							tree size issues.</p>
-						<p>Runs done on Hampshire College cluster – thanks!</p>
-					</aside>
-				</section>
-
-				<section>
-					<h2>Bias effective settings</h2>
-
-					<img align="right" data-src="figures/Sine_fitness_vs_gen_facets.svg">
-					<p>
-						Results indicate bias is (more) effective for some
-						settings.
-					</p>
-					<p>
-						Most effective for
-						<ul>
-							<li>Binary tournaments</li>
-							<li>No elitism</li>
-							<li>Larger populations (10,240)</li>
-						</ul>
-					</p>
-					<p>
-						Least effective for "reverse".
-					</p>
-				</section>
-			</section>
-
-			<section>
-				<section data-background="figures/Fountain.jpg">
-					<h1 id="contrast_color" style="font-size:500%">Results!</h1>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h2>K Landscapes</h2>
-					<h3>
-						Or, it kinda depends on which part of the elephant you've
-						gotten hold of
-					</h3>
-					<img data-src="figures/BlindMenElephant_720.png">
-				</section>
-				<section>
-					<h2>K Landscapes</h2>
-					<h3>Overall, bias helps (some)</h3>
-					<img data-src="figures/KLandscapes6_XO_bias_impact_transformed_boxplot_alpha075.svg">
-					<aside class="notes">
-						<p>Up is good; 1 is best.</p>
-						<p>All diffs significant except 0.75 vs. 1.</p>
-					</aside>
-				</section>
-				<section>
-					<h2>K Landscapes</h2>
-					<h3><em>Great</em> for the bias-effective settings!</em></h3>
-					<img data-src="figures/KLandscapes6_XO_bias_strong_impact_alpha_075.svg">
-					<aside class="notes">
-						All diffs <em>strongly</em> significant (p<10^-11).
-					</aside>
-				</section>
-				<section>
-					<h2>K Landscapes</h2>
-					<h3>Highly varied across tournament sizes</em></h3>
-					<img data-src="figures/KLandscapes6_XO_bias_impact_facets.svg">
-					<aside class="notes">
-						<ul>
-							<li>Binary: All significant</li>
-							<li>Tourny 3: All significant except 0.5 vs. 0.75 (p=0.056)</li>
-							<li>Tourny 5: <em>None</em> significant</li>
-							<li>Tourny 7: None significant except 0 vs. 1 (so bias 1 hurts).</li>
-						</ul>
-					</aside>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h2>ORDERTREE</h2>
-					<h3>Bias is generally helpful; 0.75 beats 1.0</h3>
-					<img data-src="figures/Ordertree_results_all_tournaments_Jan15.svg">
-					<aside class="notes">
-						<p>Up is good; max fitness is 1022.</p>
-
-						<p><em>ONLY USED SMALL POP (1,024)</em></p>
-
-						<p>Binary: All significant except 0.25 vs 1</p>
-					</aside>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h2>U.S. Change</h2>
-					<h3>Major impact on successes with effective settings</h3>
-					<img data-src="figures/US_change_successes_strong.svg">
-					<aside class="notes">
-						Most adjacent diffs aren't significant, but most others are.
-					</aside>
-				</section>
-				<section>
-					<h2>U.S. Change</h2>
-					<h3>Across all treatments, nothing much</h3>
-					<img data-src="figures/US_change_hits.svg">
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<h2>Pagie-1 regression</h2>
-					<h3>Good for binary tournaments; <br> bad for larger tournaments</h3>
-					<img data-src="figures/Pagie_1_Hits_vs_Bias_Tournys.svg">
-					<aside class="notes">
-						<p>Counting hits, so up is good.</p>
-					</aside>
-				</section>
-				<section>
-					<h2>Pagie-1 regression</h2>
-					<h3>For effective settings, good for binary tournaments; neutral elsewhere</h3>
-					<img data-src="figures/Pagie_1_strong_No_Tarpeian_Hits_vs_Bias_Tournys_FunctionSet.svg">
-					<aside class="notes">
-						<p>Only significant difference is binary, 0 vs. positive bias.</p>
-					</aside>
-				</section>
-			</section>
-
-			<section>
-				<section data-background="figures/What_does_it_all_mean.jpg">
-				</section>
-
-				<section>
-					<h2>Conclusions</h2>
-					<p>
-					<ul>
-						<li>Crossover bias is typically either beneficial or neutral</li>
-						<ul>
-							<li>Occassionally detrimental, however</li>
-						</ul>
-					</ul>
-				</p>
-				<p>
-					<ul>
-						<li>Worth trying when you suspect substantial differences in parental fitnesses
-							<ul>
-								<li>Selection pressure is weak</li>
-								<li>Unavoidable "cliffs" in the fitness landscape</li>
-								<li>Dynamic fitness functions</li>
-							</ul>
-					</ul>
-				</p>
-				<p>
-					Not clear if crossover bias leads to overfitting
-				</p>
-				</section>
-				<section data-markdown>
-					<script type="text/template">
-						## Asymmetries matter
-
-						Asymmetries are common in biology:
-						* Sexual selection in eukaryotes
-						* Speciation
-
-						…and in GP
-						* Grammatical evolution
-						* Linear GP
-						* Stack-based GP
-
-						Often not intentional (structural side-effects), so understudied
-					</script>
-				</section>
-				<section data-markdown>
-					<script type="text/template">
-						## Asymmetries matter
-
-						Lots of semantic GP work on _reducing_ asymmetries, especially
-						between parents and children.
-
-						Sexual selection by Goh, _et al_; work by Gustafsen, _et al_; and
-						Ryan's early "Pygmies and civil servants" paper all
-						tend to _increase_ asymmetry between parents, but don't use that
-						to structure crossover.
-
-						Better understanding of (parental) asymmetries may help:
-						* Understand behavior &amp; performance of existing systems
-						* Design new tools that leverage those asymmetries
-					</script>
-				</section>
-			</section>
-
-			<section>
-				<section>
-						<h1>Thanks!</h1>
-						<img data-src="figures/Hampshire_morning.jpg" align="right" width="50%">
-						<p>
-						Thanks for listening :-)
-					</p>
-					<p>
-						Thanks to Lee Spector's Computational Intelligence group at
-						Hampshire College and UMass Amherst for ideas and feedback, and for
-						letting us grind runs on their cluster.
-					</p>
-				</section>
-				<section>
-						<h1>Questions?</h1>
-
-						<img data-src="https://farm4.staticflickr.com/3081/2552549701_53a7235a13_b.jpg" width="75%">
-				</section>
-			</section>
-
-			</div>
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
-				slideNumber: true,
-
-				transition: 'fade', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
-		</script>
-
-	</body>
+   <head>
+      <meta charset="utf-8">
+      <title>Intro to Github</title>
+      <meta name="description" content="Intro to Github">
+      <meta name="author" content="Nicholas Freitag McPhee">
+      <meta name="author" content="M. Kirbie Dramdahl">
+      <meta name="author" content="David Donatucci">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      <link rel="stylesheet" href="css/reveal.css">
+      <link rel="stylesheet" href="css/theme/lessons.css" id="theme">
+      <!-- Code syntax highlighting -->
+      <link rel="stylesheet" href="lib/css/zenburn.css">
+      <!-- Printing and PDF exports -->
+      <script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+      <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <div class="reveal">
+         <!-- Any section element inside of this container is displayed as a slide -->
+         <div class="slides">
+            <section id="0">
+               <div style="padding:3.5em;">
+                  <!-- I'm the spacer div. Ps. use Esc key to see all slides. -->
+               </div>
+               <h1 class="vertialCenter1" style="vertical-align: middle;">Intro to Github</h1>
+            </section>
+            <section>
+               <section>
+                  <h2>The big picture</h2>
+                  <img align="right" data-src="images/introToGithub/git_logo.png" width="45%">
+                  <br>
+                  <br>
+                  <p>
+                     Strong asymmetry between <em>root parent</em> and
+                     <em>non-root parent</em> when performing sub-tree crossover.
+                  </p>
+               </section>
+               <section>
+                  <h2>The big picture</h2>
+                  <img data-src="images/introToGithub/git_logo.png" width="25%">
+                  <p>
+                     <a href="https://wiki.umn.edu/pub/UMMCSci/MICS2014TalksAndSlides/Analyzing_GP_with_Neo4j_MICS_2014.pdf">Earlier graph database work</a>
+                     suggested we might want the "better" parent be the root parent:
+                     <em>crossover bias</em>.
+                  </p>
+                  <aside class="notes">
+                     Make sure I explain this figure!
+                  </aside>
+               </section>
+               <section>
+                  <h2>The big picture</h2>
+                  <p>
+                     Here we apply <em>crossover bias</em> to a variety of settings.
+                  </p>
+                  <p>
+                     Results are slightly positive:
+                  <ul>
+                     <li>Definitely improved results for some situations</li>
+                     <li>In general led to an improvement or no difference</li>
+                     <li>In some instances it hurt</li>
+                  </ul>
+                  </p>
+                  <p>
+                     Suggests that parental asymmetries can matter and deserve further
+                     study.
+                  </p>
+               </section>
+            </section>
+            <section>
+               <section>
+                  <h2>Parental asymmetries</h2>
+                  <img align="right" style="padding: 15px; background-color: #FFFFFF" 
+                     data-src="images/introToGithub/git_logo.png" width="40%">
+                  <p>
+                     Root parent vs. non-root parent
+                  </p>
+                  <p>
+                     Crossover asymmetry: Root parent (typically) contributes more
+                  </p>
+                  <p>
+                     Earlier observation: Offspring did better when root parent was
+                     the more fit parent.
+                  </p>
+                  <p>
+                     Is this true more generally?
+                  </p>
+               </section>
+               <section>
+                  <h2>Crossover bias probability</h2>
+                  <blockquote>
+                     The likelihood that
+                     parents will be swapped (if necessary) to ensure that the more fit
+                     parent is the root parent.
+                  </blockquote>
+                  <p>
+                     Explore crossover bias probabilities 0, 0.25, 0.5, 0.75, &amp; 1.00.
+                  </p>
+                  <ul>
+                     <li>0.00 bias probability: Never swap; like regular crossover</li>
+                     <li>1.00: <em>Always</em> ensure more fit parent is root parent.</li>
+                  </ul>
+                  <p>
+                     Note: We have 50% chance that more fit parent is root parent even
+                     without swapping. E.g., 50% bias implies 75% of
+                     crossovers have more fit parent as root parent.
+                  </p>
+               </section>
+            </section>
+            <section>
+               <section data-background="figures/Fountain.jpg">
+                  <h1 id="contrast_color" style="font-size:500%">Results!</h1>
+               </section>
+            </section>
+            <section>
+               <section>
+                  <h2>K Landscapes</h2>
+                  <h3>
+                     Or, it kinda depends on which part of the elephant you've
+                     gotten hold of
+                  </h3>
+                  <img data-src="images/introToGithub/git_logo.png" width="25%">
+               </section>
+               <section>
+                  <h2>K Landscapes</h2>
+                  <h3>Overall, bias helps (some)</h3>
+                  <img data-src="images/introToGithub/git_logo.png" width="25%">
+                  <aside class="notes">
+                     <p>Up is good; 1 is best.</p>
+                     <p>All diffs significant except 0.75 vs. 1.</p>
+                  </aside>
+               </section>
+               <section>
+                  <h2>K Landscapes</h2>
+                  <h3><em>Great</em> for the bias-effective settings!</em></h3>
+                  <img data-src="images/introToGithub/git_logo.png" width="25%">
+                  <aside class="notes">
+                     All diffs <em>strongly</em> significant (p<10^-11).
+                  </aside>
+               </section>
+               <section>
+                  <h2>K Landscapes</h2>
+                  <h3>Highly varied across tournament sizes</em></h3>
+                  <img data-src="images/introToGithub/git_logo.png" width="25%">
+                  <aside class="notes">
+                     <ul>
+                        <li>Binary: All significant</li>
+                        <li>Tourny 3: All significant except 0.5 vs. 0.75 (p=0.056)</li>
+                        <li>Tourny 5: <em>None</em> significant</li>
+                        <li>Tourny 7: None significant except 0 vs. 1 (so bias 1 hurts).</li>
+                     </ul>
+                  </aside>
+               </section>
+            </section>
+            <section>
+               <section>
+                  <h2>U.S. Change</h2>
+                  <h3>Major impact on successes with effective settings</h3>
+                  <img data-src="images/introToGithub/git_logo.png" width="25%">
+                  <aside class="notes">
+                     Most adjacent diffs aren't significant, but most others are.
+                  </aside>
+               </section>
+               <section>
+                  <h2>U.S. Change</h2>
+                  <h3>Across all treatments, nothing much</h3>
+                  <img data-src="images/introToGithub/git_logo.png" width="25%">
+               </section>
+            </section>
+            <section>
+               <section>
+                  <h1>Thanks!</h1>
+                  <img data-src="images/common/oh-logo.png" width="25%">
+                  <br>
+                  <br>
+                  <p>Thanks for listening :-)</p>
+               </section>
+               <section>
+                  <h1>Questions?</h1>
+                  <img data-src="https://farm4.staticflickr.com/3081/2552549701_53a7235a13_b.jpg" width="75%">
+               </section>
+            </section>
+         </div>
+      </div>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
+      <script>
+         // Full list of configuration options available at:
+         // https://github.com/hakimel/reveal.js#configuration
+         Reveal.initialize({
+         	controls: true,
+         	progress: true,
+         	history: true,
+         	center: false,
+         	slideNumber: true,
+         
+         	transition: 'fade', // none/fade/slide/convex/concave/zoom
+         
+         	// Optional reveal.js plugins
+         	dependencies: [
+         		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+         		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+         		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+         		{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+         		{ src: 'plugin/zoom-js/zoom.js', async: true },
+         		{ src: 'plugin/notes/notes.js', async: true }
+         	]
+         });
+         
+      </script>
+   </body>
 </html>
