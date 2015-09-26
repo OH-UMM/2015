@@ -203,3 +203,9 @@ body {
 .right{
    text-align:right;
 }
+.code{
+   color:navy;
+}
+.step{
+   color:orange;
+}

@@ -100,12 +100,20 @@
 				            <li>how to view the previous version and the new version <br>(click on the bolded "revision as of...")</li>
 				        </ul>
 				    </section>	
-
-
-
-
             </section>
+            <section class="present" style="top: -137.5px; display: block;">
+               <div style="padding:3.5em;">
+               <!-- Spacer. Hint: use Esc key to see all slides. -->
+               </div>
+			      <p class="float-left">Wikipedia runs on a piece of software called <a href="http://en.wikipedia.org/wiki/MediaWiki">Mediawiki</a>.  That's one version control system.  What others are there?  </p>
+			      
+			      
+			      <p class="float-left" style="padding:1em">And what's the difference between a version control system and a repository and a host, anyway?</p>
+				</section>
+<section data-background="images/introToGit/vc_chart.png" class="present" style="top: -40px; display: block;">
 
+				       
+				    </section>
 
 
 
@@ -118,44 +126,95 @@
 
             <section>
                <section>
-                  <h2>The big picture</h2>
+                  <h2>THE FORKING WORKFLOW</h2>
                   <img align="right" data-src="images/introToGit/git_logo.png" width="45%">
                   <br>
                   <br>
                   <p>
-                     Strong asymmetry between <em>root parent</em> and
-                     <em>non-root parent</em> when performing sub-tree crossover.
+                    Many open source projects use the forking workflow.
+                  </p>
+                  <br>
+                  <p>
+                    When a user forks a project, they get their own copy to experiment and build in. If the user build something cool they can ask the maintainer, using a pull request, to accept their modifications.
                   </p>
                </section>
                <section>
-                  <h2>The big picture</h2>
-                  <img data-src="images/introToGit/git_logo.png" width="25%">
-                  <p>
-                     <a href="https://wiki.umn.edu/pub/UMMCSci/MICS2014TalksAndSlides/Analyzing_GP_with_Neo4j_MICS_2014.pdf">Earlier graph database work</a>
-                     suggested we might want the "better" parent be the root parent:
-                     <em>crossover bias</em>.
-                  </p>
-                  <aside class="notes">
-                     Make sure I explain this figure!
-                  </aside>
+                  <h2>FORK THE PROJECT REPOSITORY</h2>
+                  <img data-src="images/introToGit/02.svg" width="45%">
+                  <img data-src="https://help.github.com/assets/images/help/repository/fork_button.jpg" width="45%">
+                  <p class="step">You and a friend decide to contribute to the Morris OpenHatch project.</p>
+                  <img data-src="images/introToGit/03.svg" width="80%" style="padding-top:1em;">
                </section>
                <section>
-                  <h2>The big picture</h2>
-                  <p>
-                     Here we apply <em>crossover bias</em> to a variety of settings.
+                  <h2>CLONE</h2><br />
+                  
+                  <p class="code">
+                     git clone [remote]
                   </p>
-                  <p>
-                     Results are slightly positive:
-                  <ul>
-                     <li>Definitely improved results for some situations</li>
-                     <li>In general led to an improvement or no difference</li>
-                     <li>In some instances it hurt</li>
-                  </ul>
+                  <img data-src="images/introToGit/04.svg" width="70%" style="padding-top:1em;">
+               </section>
+               <section>
+                  <h2>WORK ON FEATURES</h2><br />
+                  
+                  <p class="code">
+                     git add [names of files you changed]
+                  </p><br />
+                  
+                  <p class="code">
+                     git commit -m"Useful comment the work what I did."
+                  </p><br />
+
+                  <p class="code">
+                     git pull upstream master
                   </p>
-                  <p>
-                     Suggests that parental asymmetries can matter and deserve further
-                     study.
+                  <img data-src="images/introToGit/05.svg" width="70%" style="padding-top:1em;">
+               </section>
+               <section>
+                  <h2>WORK ON FEATURES</h2><br />
+                  
+                  <p class="code">
+                     git push origin master
+                  </p><br />
+
+                  <p class="step">
+                     Make a pull request
                   </p>
+
+                  <img data-src="images/introToGit/06.svg" width="70%" style="padding-top:.7em;">
+               </section>
+               <section>
+                  <h2>WORK ON FEATURES</h2><br />
+                  
+                  <p class="step">
+                  Maintainer decides to accept pull requests and merge changes into the main projects. 
+                  </p>
+
+                  <img data-src="images/introToGit/07.svg" width="70%" style="padding-top:.7em;">
+               </section>
+               <section>
+               
+                  <h2>WORK ON FEATURES</h2><br />
+                  
+                  <p class="step">
+                  All of the developers can synchronize the newly updated codebase.
+                  </p><br />
+                  
+                  <p class="code">
+                     git pull upstream master
+                  </p>
+                  <img data-src="images/introToGit/08.svg" width="70%" style="padding-top:.6em;">
+               </section>
+               <section>
+               
+                  <h2>DEVELOPMENT CONTINUES</h2><br />
+                  <img data-src="images/introToGit/01.svg" width="70%">
+                  <p class="step">
+                  Pulling. Changing. Committing. Pushing. Merging.
+                  </p><br />
+                  <p>
+                  MAKING.
+                  </p><br />
+               
                </section>
             </section>
             <section>
