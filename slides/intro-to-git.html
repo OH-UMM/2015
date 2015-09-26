@@ -68,7 +68,7 @@
 
 
 
-<section class="present" style="top: -295.5px; display: block;">
+<section class="present" data-transition="concave">
 				        <h2>Taking a closer look</h2>
 				        <p class="float-left">Let's <a href="http://en.wikipedia.org/wiki/Main_Page" target="_blank">visit Wikipedia</a>.</p><br /><br />
 				        <p class="float-left">Every Wikipedia page, including the main page, has a special view.  You can find it in the top right-hand corner of the screen: it says "View History".  Pick a page -- any page -- and find the "View History" tab.  Then click it.</p>
@@ -101,7 +101,7 @@
 				        </ul>
 				    </section>	
             </section>
-            <section class="present" style="top: -137.5px; display: block;">
+            <section class="present"  data-transition="concave">
                <div style="padding:3.5em;">
                <!-- Spacer. Hint: use Esc key to see all slides. -->
                </div>
@@ -110,32 +110,23 @@
 			      
 			      <p class="float-left" style="padding:1em">And what's the difference between a version control system and a repository and a host, anyway?</p>
 				</section>
-<section data-background="images/introToGit/vc_chart.png" class="present" style="top: -40px; display: block;">
-
-				       
-				    </section>
+<section data-transition="concave" data-background="images/introToGit/vc_chart.png" class="present"> 
+			   </section>
 
 
-
-
-
-
-
-
-
-
-            <section>
+            <section  data-transition="concave">
                <section>
                   <h2>THE FORKING WORKFLOW</h2>
                   <img align="right" data-src="images/introToGit/git_logo.png" width="45%">
                   <br>
                   <br>
                   <p>
-                    Many open source projects use the forking workflow.
+                    Many open source projects use the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow">
+                    forking workflow</a>.
                   </p>
                   <br>
                   <p>
-                    When a user forks a project, they get their own copy to experiment and build in. If the user build something cool they can ask the maintainer, using a pull request, to accept their modifications.
+                    When a user forks a project, they get their own copy to experiment and build in. If the user builds something cool they can ask the maintainer, using a pull request, to accept their modifications.
                   </p>
                </section>
                <section>
@@ -170,7 +161,7 @@
                   <img data-src="images/introToGit/05.svg" width="70%" style="padding-top:1em;">
                </section>
                <section>
-                  <h2>WORK ON FEATURES</h2><br />
+                  <h2>SHARE YOUR CHANGES</h2><br />
                   
                   <p class="code">
                      git push origin master
@@ -183,7 +174,7 @@
                   <img data-src="images/introToGit/06.svg" width="70%" style="padding-top:.7em;">
                </section>
                <section>
-                  <h2>WORK ON FEATURES</h2><br />
+                  <h2>CONTRIBUTION</h2><br />
                   
                   <p class="step">
                   Maintainer decides to accept pull requests and merge changes into the main projects. 
@@ -193,7 +184,7 @@
                </section>
                <section>
                
-                  <h2>WORK ON FEATURES</h2><br />
+                  <h2>SEE THE CHANGES</h2><br />
                   
                   <p class="step">
                   All of the developers can synchronize the newly updated codebase.
@@ -211,112 +202,12 @@
                   <p class="step">
                   Pulling. Changing. Committing. Pushing. Merging.
                   </p><br />
-                  <p>
-                  MAKING.
-                  </p><br />
                
                </section>
             </section>
-            <section>
-               <section>
-                  <h2>Parental asymmetries</h2>
-                  <img align="right" style="padding: 15px; background-color: #FFFFFF" 
-                     data-src="images/introToGit/git_logo.png" width="40%">
-                  <p>
-                     Root parent vs. non-root parent
-                  </p>
-                  <p>
-                     Crossover asymmetry: Root parent (typically) contributes more
-                  </p>
-                  <p>
-                     Earlier observation: Offspring did better when root parent was
-                     the more fit parent.
-                  </p>
-                  <p>
-                     Is this true more generally?
-                  </p>
-               </section>
-               <section>
-                  <h2>Crossover bias probability</h2>
-                  <blockquote>
-                     The likelihood that
-                     parents will be swapped (if necessary) to ensure that the more fit
-                     parent is the root parent.
-                  </blockquote>
-                  <p>
-                     Explore crossover bias probabilities 0, 0.25, 0.5, 0.75, &amp; 1.00.
-                  </p>
-                  <ul>
-                     <li>0.00 bias probability: Never swap; like regular crossover</li>
-                     <li>1.00: <em>Always</em> ensure more fit parent is root parent.</li>
-                  </ul>
-                  <p>
-                     Note: We have 50% chance that more fit parent is root parent even
-                     without swapping. E.g., 50% bias implies 75% of
-                     crossovers have more fit parent as root parent.
-                  </p>
-               </section>
+            
             </section>
-            <section>
-               <section data-background="figures/Fountain.jpg">
-                  <h1 id="contrast_color" style="font-size:500%">Results!</h1>
-               </section>
-            </section>
-            <section>
-               <section>
-                  <h2>K Landscapes</h2>
-                  <h3>
-                     Or, it kinda depends on which part of the elephant you've
-                     gotten hold of
-                  </h3>
-                  <img data-src="images/introToGit/git_logo.png" width="25%">
-               </section>
-               <section>
-                  <h2>K Landscapes</h2>
-                  <h3>Overall, bias helps (some)</h3>
-                  <img data-src="images/introToGit/git_logo.png" width="25%">
-                  <aside class="notes">
-                     <p>Up is good; 1 is best.</p>
-                     <p>All diffs significant except 0.75 vs. 1.</p>
-                  </aside>
-               </section>
-               <section>
-                  <h2>K Landscapes</h2>
-                  <h3><em>Great</em> for the bias-effective settings!</em></h3>
-                  <img data-src="images/introToGit/git_logo.png" width="25%">
-                  <aside class="notes">
-                     All diffs <em>strongly</em> significant (p<10^-11).
-                  </aside>
-               </section>
-               <section>
-                  <h2>K Landscapes</h2>
-                  <h3>Highly varied across tournament sizes</em></h3>
-                  <img data-src="images/introToGit/git_logo.png" width="25%">
-                  <aside class="notes">
-                     <ul>
-                        <li>Binary: All significant</li>
-                        <li>Tourny 3: All significant except 0.5 vs. 0.75 (p=0.056)</li>
-                        <li>Tourny 5: <em>None</em> significant</li>
-                        <li>Tourny 7: None significant except 0 vs. 1 (so bias 1 hurts).</li>
-                     </ul>
-                  </aside>
-               </section>
-            </section>
-            <section>
-               <section>
-                  <h2>U.S. Change</h2>
-                  <h3>Major impact on successes with effective settings</h3>
-                  <img data-src="images/introToGit/git_logo.png" width="25%">
-                  <aside class="notes">
-                     Most adjacent diffs aren't significant, but most others are.
-                  </aside>
-               </section>
-               <section>
-                  <h2>U.S. Change</h2>
-                  <h3>Across all treatments, nothing much</h3>
-                  <img data-src="images/introToGit/git_logo.png" width="25%">
-               </section>
-            </section>
+           
             <section>
                <section>
                   <h1>Thanks!</h1>
