@@ -186,17 +186,20 @@ body {
     width:200px;
 }
 
-.vertical-align {
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
+.nowrap {
+    white-space: nowrap;
 }
 
-/*********************************************
- * Our Additions
- *********************************************/
-.vertialCenter{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.reveal section section img{
+   margin:.5em;
+   color: red;
+}
+.left{
+   text-align:left;
+}
+.center{
+   text-align:center;
+}
+.right{
+   text-align:right;
 }
