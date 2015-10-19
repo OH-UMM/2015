@@ -1,5 +1,5 @@
-# GECCO 2015 slides
+# 2015 slides
 
-Slides for our GECCO 2015 presentation in Madrid, Spain.
+Slides adapted from Nic McPhee's work. Thanks Nic!
 
 Created using [reveal.js](https://github.com/hakimel/reveal.js) 
