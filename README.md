@@ -3,7 +3,7 @@
 ###Register for the 2015 event at http://oh-umm.github.io/2015/.
 
 You have found the source code for this year's Morris OpenHatch Open Souce Event. 
-Vist the wiki to see our schedule and resources: https://github.com/OH-UMM/2015/wiki.
+Visit the wiki to see our schedule and resources: https://github.com/OH-UMM/2015/wiki.
 
 Original Source: https://github.com/openhatch/open-source-comes-to-campus
 
@@ -11,7 +11,7 @@ Original Source: https://github.com/openhatch/open-source-comes-to-campus
 
 For future organizers:
 You will likely want to make a fresh copy of this repository (name it after the current year) and modify it as you move forward. 
-* **Registraion** - Update the site. Making a new copy of this repo named 2016, for example, 
+* **Registration** - Update the site. Making a new copy of this repo named 2016, for example, 
 should give you a new copy with the url [http://oh-umm.github.io/**2016**/](http://oh-umm.github.io/2016/). 
 Then you can modify the page, update the google forms and push these changes to 'gh-pages' branch of the project.
 
